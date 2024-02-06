@@ -14,9 +14,11 @@ Thanks for checking this out!!
 <img src="Sand/Sand_img.png" alt="The sand simulation" width="400" height="300">
 
 # Wave Function Collapse
-- This is a more involved project, it implements a wave funtion collapse algorithm, but I try to do on my own.
-- It runs in python so larger grids will take some time to be complete.
-- There different tile packs provided but the code uses the demo pack.
+- This is a more involved project, it implements a wave funtion collapse algorithm.
+- What I have isn't perfect but I have tried my best to implement what *I* think would be the way to do it.
+- There is still a known bug where ocassionally the algorithm creates an unsolvable situation so it cannot generate a block and crashes
+- It runs in python so larger grids will take some time to be complete. A grid of 100 takes around 3 minutes to complete.
+- There are different tile packs provided but the code uses the demo pack.
 - [This awsome video by The Coding Train explains how the algorithm works and he implements it in JS](https://www.youtube.com/watch?v=rI_y2GAlQFM&t=212s)
 <img src="WaveFunctionCollapse/output.png" alt="The results" width="400" height="300">
 
