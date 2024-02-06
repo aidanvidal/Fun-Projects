@@ -89,6 +89,8 @@ while running:
                 for j in range(-1, 2):
                     if random.random() < 0.60:  # 60% chance of calling update_grid
                         update_grid(grid, grid_x + i, grid_y + j)
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE: # Clear the grid
+            grid = init_grid()
             
 
     # Update the grid
