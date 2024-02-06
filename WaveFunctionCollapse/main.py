@@ -164,7 +164,7 @@ start_cell()
 update_directions()
 while True:
     if len(superposition_cells) == 0:
-        pygame.image.save(window, f"./output.png")
+        pygame.image.save(window, f"./WaveFunctionCollapse/output.png")
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -174,6 +174,8 @@ while True:
         if cell["collapsed"]:
             window.blit(pygame.transform.scale(cell["tile"], (cell_size, cell_size)), (cell["x"] * cell_size, cell["y"] * cell_size))
     '''
+    Uncommet this to and comment the thing below to be able to click to place a tile and space to get tile directions
+    
     # handle events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
