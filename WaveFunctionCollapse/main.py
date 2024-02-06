@@ -3,7 +3,7 @@ import random
 
 # settings
 grid_size = 25
-#tileset = "tileset1"
+tileset_path = "WaveFunctionCollapse/tiles/demo"
 random_starting_cells = 1
 
 # Directional constants
@@ -59,11 +59,11 @@ pygame.display.set_caption("WFC")
 
 # load the tileset
 tiles = [
-    pygame.image.load(f"./tiles/demo/blank.png").convert_alpha(),
-    pygame.image.load(f"./tiles/demo/down.png").convert_alpha(),
-    pygame.image.load(f"./tiles/demo/left.png").convert_alpha(),
-    pygame.image.load(f"./tiles/demo/right.png").convert_alpha(),
-    pygame.image.load(f"./tiles/demo/up.png").convert_alpha(),
+    pygame.image.load(f"./{tileset_path}/blank.png").convert_alpha(),
+    pygame.image.load(f"./{tileset_path}/down.png").convert_alpha(),
+    pygame.image.load(f"./{tileset_path}/left.png").convert_alpha(),
+    pygame.image.load(f"./{tileset_path}/right.png").convert_alpha(),
+    pygame.image.load(f"./{tileset_path}/up.png").convert_alpha(),
 ]
 
 # lists to store the cells
