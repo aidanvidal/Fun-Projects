@@ -22,3 +22,9 @@ Thanks for checking this out!!
 - [This awsome video by The Coding Train explains how the algorithm works and he implements it in JS](https://www.youtube.com/watch?v=rI_y2GAlQFM&t=212s)
 <img src="WaveFunctionCollapse/output.png" alt="The results" width="400" height="300">
 
+# Image to ASCII
+- This was a fun simple project to work on. It converts image/video to ASCII characters.
+- It maps out the brightness of a pixel to a certain ASCII character.
+- I added color to it by assigning the new ASCII a the color of the old pixel, but this is an optional toggle
+- Inspired by [The Coding Train again.](https://www.youtube.com/watch?v=55iwMYv8tGI&t=1150s)
+<img src="ImageToASCII/ascii_color.png" alt="The results" width = "400" height="300">
