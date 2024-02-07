@@ -81,8 +81,28 @@ def pick_cell():
     else:
         return None
 
+def restart_board():
+    global cells, collapsed_cells, superposition_cells, cell_dict
+    cells = []
+    collapsed_cells = []
+    superposition_cells = []
+    cell_dict = {}
+    init_cells()
+    start_cell()
+    update_directions()
+    # clear the screen
+    window.fill((0, 0, 0))
+    pygame.display.flip()
+    
 # collapse the cell
 def collapse(cell):
+    # Check if directions are empty
+    if len(cell["directions"]) == 0:
+        print("No directions left")
+        print("Restarting the board")
+        restart_board()
+        return
+        
     cell["superposition"] = False
     cell["collapsed"] = True
     dir = random.choice(cell["directions"])
@@ -127,9 +147,7 @@ def update_directions():
                 for d in cell["directions"]:
                     if d not in rules["left"][right["directions"][0]]:
                         cell["directions"].remove(d)
-        
             
-                
 def init_cells():
     # create a grid of cells
     for y in range(rows):
@@ -169,12 +187,17 @@ while True:
             if event.type == pygame.QUIT:
                 pygame.quit()
                 exit()
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_c: # Reset the board
+                restart_board()
+                break
+            
     # draw the cells
     for cell in cells:
         if cell["collapsed"]:
             window.blit(pygame.transform.scale(cell["tile"], (cell_size, cell_size)), (cell["x"] * cell_size, cell["y"] * cell_size))
+    
     '''
-    Uncommet this to and comment the thing below to be able to click to place a tile and space to get tile directions
+    #Uncommet this to and comment the thing below to be able to click to place a tile and space to get tile directions
     
     # handle events
     for event in pygame.event.get():
@@ -205,6 +228,7 @@ while True:
                 if hovered_cell:
                     print("Directions:", hovered_cell["directions"])
         '''
+        
     cell = pick_cell()
     if cell:
         collapse(cell)
@@ -214,7 +238,7 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
-    
+
     # update the display
     pygame.display.flip()
     clock.tick(60)
