@@ -7,7 +7,8 @@ import pygame
 COLOR_WANT = True
 
 # Density array of ASCII characters
-DENSITY = 'Ñ@#W$9876543210?!abc;:+=-,._ '
+#DENSITY = 'Ñ@#W$9876543210?!abc;:+=-,._ '
+DENSITY = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1[]{}?-_+~<>i!lI;:,"^`\'. '
 
 # Font
 # If the font size is too large, the ASCII art will be too large to display
