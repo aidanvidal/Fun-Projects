@@ -47,7 +47,7 @@ def map_density(brightness):
     
 # Print ASCII art in a file
 def print_ascii(density):
-    with open('ascii.txt', 'w') as f:
+    with open('./ImagetoASCII/ascii.txt', 'w') as f:
         f.write(density)
 
 # Display ASCII art in a new window
