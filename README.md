@@ -29,3 +29,7 @@ Thanks for checking this out!!
 - I added color to it by assigning the new ASCII a the color of the old pixel, but this is an optional toggle
 - Inspired by [The Coding Train again.](https://www.youtube.com/watch?v=55iwMYv8tGI&t=1150s)
 <img src="ImageToASCII/ascii_color.png" alt="The results" width = "400" height="300">
+
+# Conway's Game of Life
+- It's just Conway's game of life, not much to it.
+- Controls: Space = Pause/Unpause, Right Arrow = Next step, Click = Place/Unplace
